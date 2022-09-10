@@ -16,7 +16,7 @@ int main(void)
 	/* your code goes there */
 	c = 'a';
 	do {
-		if (c != 'q' || c != 'e')
+		if (c != 'q' && c != 'e')
 			putchar(c);
 		c++;
 	} while (c != ('z' + 1));
