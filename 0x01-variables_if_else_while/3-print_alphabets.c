@@ -21,10 +21,9 @@ int main(void)
 		c++;
 	} while (c != ('z' + 1));
 	do {
-                putchar(C);
-                C++;
+		putchar(C);
+		C++;
         } while (C != ('Z' + 1));
-        putchar('\n');
-
+	putchar('\n');
 	return (0);
 }
