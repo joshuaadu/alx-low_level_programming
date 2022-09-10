@@ -23,7 +23,7 @@ int main(void)
 	do {
 		putchar(C);
 		C++;
-        } while (C != ('Z' + 1));
+	} while (C != ('Z' + 1));
 	putchar('\n');
 	return (0);
 }
