@@ -15,7 +15,7 @@ int main(void)
 
 void print_alphabet(void)
 {
-	char c = 'a'
+	char c = 'a';
 	while(c < 123)
 	{
 		_putchar(ALPHASTART);
