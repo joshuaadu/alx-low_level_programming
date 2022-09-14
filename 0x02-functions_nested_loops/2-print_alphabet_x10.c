@@ -12,9 +12,9 @@ void print_alphabet_x10(void)
 {
 	while (COUNTER < 10)
 	{
-		while (ALPHASTART < '123')
+		while (ALPHASTART < 123)
 		{
-			_putchar(ALPHSTART);
+			_putchar(ALPHASTART);
 			++ALPHASTART;
 		}
 		_putchar('\n');
