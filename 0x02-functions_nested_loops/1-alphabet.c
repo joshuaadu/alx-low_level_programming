@@ -1,6 +1,5 @@
 #include "main.h"
 
-#define ALPHASTART 'a'
 void print_alphabet(void);
 
 /**
@@ -16,10 +15,11 @@ int main(void)
 
 void print_alphabet(void)
 {
-	while(ALPHASTART < 123)
+	char c = 'a'
+	while(c < 123)
 	{
 		_putchar(ALPHASTART);
-		++ALPHASTART;
+		++c;
 	}
 	_putchar('\n');
 }
