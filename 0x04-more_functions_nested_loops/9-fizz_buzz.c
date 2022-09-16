@@ -12,7 +12,7 @@ int main(void)
 
 	for (n = 1; n < 101; n++)
 	{
-		if (n > 1 && n < 100)
+		if (n > 1 && n)
 		{
 			putchar(' ');
 		}
@@ -26,7 +26,7 @@ int main(void)
 		}
 		else if (n % 5 == 0)
 		{
-			printf("Fizz");
+			printf("Buzz");
 		}
 		else
 		{
