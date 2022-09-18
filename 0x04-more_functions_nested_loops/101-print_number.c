@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * print_number - prints an integer
@@ -7,14 +8,14 @@
  *
  */
 
-void print_number(int n);
+void print_number(int n)
 {
 	unsigned int i;
 	int j, k;
 
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		i = -n;
 	}
 
@@ -29,7 +30,7 @@ void print_number(int n);
 	for (; k > 0 ; k /= 10)
 	{
 
-		_putchar(((i / k) % 10) + '0');
+		putchar(((i / k) % 10) + '0');
 	}
 
 }
