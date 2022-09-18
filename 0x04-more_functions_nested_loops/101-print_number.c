@@ -26,8 +26,8 @@ void print_number(int n);
 	{
 		k *= 10;
 	}
-	
-	for (; k > 0 ;n k /= 10)
+
+	for (; k > 0 ; k /= 10)
 	{
 
 		_putchar(((i / k) % 10) + '0');
