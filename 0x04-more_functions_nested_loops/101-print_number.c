@@ -10,27 +10,16 @@
 
 void print_number(int n)
 {
-	unsigned int i;
-	int j, k;
+	unsigned int i = n;
 
-	if (n < 0)
+	if (i < 0)
 	{
 		_putchar('-');
-		i = -n;
+		i = -i;
 	}
-
-	j = i;
-	k = 1;
-
-	for (; j / 10 != 0; j /= 10)
+	if (i / 10)
 	{
-		k *= 10;
+		print_number(i / 10);
 	}
-
-	for (; k > 0 ; k /= 10)
-	{
-
-		_putchar(((i / k) % 10) + '0');
-	}
-
+	_putchar((i % 10) + '0');
 }
