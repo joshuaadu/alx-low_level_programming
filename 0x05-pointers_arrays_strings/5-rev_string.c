@@ -23,5 +23,4 @@ void rev_string(char *s)
 		s[i - j - 1] = temp;
 	}
 
-	putchar('\n');
 }
