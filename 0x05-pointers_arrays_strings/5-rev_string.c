@@ -12,13 +12,13 @@ void rev_string(char *s)
 	int i, j, half;
 	char temp;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	for (i = 0; (s[i] != '\0'; i++)
 		;
 	half = i / 2;
 
 	for (j = 0; j < half; j++)
 	{
-		temp = s[i];
+		temp = s[j];
 		s[j] = s[i - j - 1];
 		s[i - j - 1] = temp;
 	}
