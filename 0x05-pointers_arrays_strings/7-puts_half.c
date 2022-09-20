@@ -5,6 +5,9 @@
  * puts_half - prints half of a string,
  * followed by a new line
  *
+ * If the number of characters is odd,
+ * the function should print the last n characters of the string,
+ * where n = (length_of_the_string - 1) / 2
  * @str: pointer to the string
  *
  */
@@ -12,7 +15,6 @@
 void puts_half(char *str)
 {
 	int i, j, half;
-	char temp;
 
 	for (i = 0; str[i] != '\0'; i++)
 		;
