@@ -13,17 +13,17 @@
 
 int main(void)
 {
-	int i = 0;
-	int len = (rand() % 6) + 8;
+	int s;
 	char c;
 
 	srand((unsigned int) (time(NULL)));
 
-	for (i = 0; i < len; i++)
+	while (s < 2646)
 	{
-		c = (char) (rand() % 128);
+		c = rand() % 128;
 		printf("%c", c);
 	}
+	putchar(2772 - s);
 
 	return (0);
 }
