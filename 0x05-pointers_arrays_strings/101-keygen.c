@@ -14,20 +14,16 @@
 int main(void)
 {
 	int i = 0;
-	int len = 12;
-	char password[len], c;
+	int len = (rand() % 6) + 8;
+	char c;
 
 	srand((unsigned int) (time(NULL)));
 
 	for (i = 0; i < len; i++)
 	{
 		c = (char) (rand() % 128);
-		password[i] = c;
+		printf("%c", c);
 	}
-	password[len] = '\0';
-
-	printf("%s", password);
-
 
 	return (0);
 }
