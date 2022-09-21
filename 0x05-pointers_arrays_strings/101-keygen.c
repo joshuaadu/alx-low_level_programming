@@ -14,7 +14,7 @@
 int main(void)
 {
 	int i = 0;
-	int len = (rand() % 6) + 8;
+	int len = 12;
 	char password[len], c;
 
 	srand((unsigned int) (time(NULL)));
