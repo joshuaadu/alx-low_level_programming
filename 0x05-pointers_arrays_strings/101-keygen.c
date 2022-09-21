@@ -13,7 +13,7 @@
 
 int main(void)
 {
-	int s;
+	int s = 0;
 	char c;
 
 	srand((unsigned int) (time(NULL)));
