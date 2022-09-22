@@ -22,7 +22,7 @@ int main(void)
 		i = rand() % 128;
 		if ((c + i) > 2772)
 			break;
-		c = c + i
+		c = c + i;
 		printf("%c", i);
 	}
 
