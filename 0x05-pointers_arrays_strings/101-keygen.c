@@ -13,17 +13,20 @@
 
 int main(void)
 {
-	int s = 0;
-	char c;
+	int i = 0, c = 0;
 
 	srand((unsigned int) (time(NULL)));
 
-	while (s < 2646)
+	while (c < 2772)
 	{
-		c = rand() % 128;
-		printf("%c", c);
+		i = rand() % 128;
+		if ((c + i) > 2772)
+			break;
+		c = c + i
+		printf("%c", i);
 	}
-	putchar(2772 - s);
+
+	printf("%c\n", (27772 - c));
 
 	return (0);
 }
