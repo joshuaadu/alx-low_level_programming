@@ -29,6 +29,25 @@ int isPal(char *s, int len, int i)
 	return (1);
 }
 
+/**
+ * _strlen - find the length of a string
+ * @s: string to find its length
+ *
+ * Return: length of the string
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	if (s[len] != '\0')
+	{
+		len++;
+		strlen(s[len]);
+	}
+	return (len);
+}
+
 
 /**
  * is_palindrome - check if a string is a palindrome
@@ -44,11 +63,11 @@ int is_palindrome(char *s)
 {
 	int len = 0;
 
+	len = _strlen(s);
+
 	if (*s == '\0')
 		return (1);
 
-	for ( ; s[len] ; len++)
-		;
 	/* printf("%d \n", len); */
 	/* printf("length is: %d; string is: %s;\n", len, s); */
 	return (isPal(s, len, 0));
