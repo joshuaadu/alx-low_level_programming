@@ -43,7 +43,7 @@ int _strlen(char *s)
 	if (s[len] != '\0')
 	{
 		len++;
-		_strlen(s[len]);
+		_strlen(++s);
 	}
 	return (len);
 }
