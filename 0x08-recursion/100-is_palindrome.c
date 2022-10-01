@@ -32,20 +32,19 @@ int isPal(char *s, int len, int i)
 /**
  * _strlen - find the length of a string
  * @s: string to find its length
+ * @i: starting index
  *
  * Return: length of the string
  */
 
-int _strlen(char *s)
+int _strlen(char *s, int i)
 {
-	int len = 0;
-
-	if (s[len] != '\0')
+	if (s[i] != '\0')
 	{
-		len++;
-		_strlen(++s);
+		i++;
+		return (_strlen(s, i));
 	}
-	return (len);
+	return (i);
 }
 
 
