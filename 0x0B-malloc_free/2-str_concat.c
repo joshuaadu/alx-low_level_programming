@@ -28,13 +28,13 @@ char *str_concat(char *s1, char *s2)
 
 	for (len1 = 0; s1[len1] != '\0'; len1++)
 		;
-	for (len2 = 0; s1[len2] != '\0'; len2++)
+	for (len2 = 0; s2[len2] != '\0'; len2++)
 		;
 
 	/*printf("length of s1: %d\n", len1);*/
 	/*printf("length of s2: %d\n", len2);*/
 
-	s = malloc(sizeof(char) * (len1 + len2 + 1));
+	s = malloc(sizeof(char) * (len1 + len2 + 2));
 
 	if (s == NULL)
 	{
