@@ -27,7 +27,10 @@ int **alloc_grid(int width, int height)
 
 	/* if insufficient memory available return NULL */
 	if (grid == NULL)
+	{
+		free(gridout);
 		return (NULL);
+	}
 
 	/* Add columns to each row */
 	for (i = 0; i < height; i++)
