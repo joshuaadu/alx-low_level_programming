@@ -28,7 +28,7 @@ int **alloc_grid(int width, int height)
 	/* if insufficient memory available return NULL */
 	if (grid == NULL)
 	{
-		free(gridout);
+		free(grid);
 		return (NULL);
 	}
 
