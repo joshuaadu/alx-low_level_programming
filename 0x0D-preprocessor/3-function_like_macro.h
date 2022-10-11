@@ -6,8 +6,8 @@
  * File: 3-function_like_macro.h
  * Desc: computes the absolute value of a number
  * with function like marco ABS(x)
- *
+ * @x: number
  */
 
-#define ABS(x) (((x) < 0) ? (-x) : (x))
+#define ABS(x) (((x) < 0) ? -(x) : (x))
 #endif
