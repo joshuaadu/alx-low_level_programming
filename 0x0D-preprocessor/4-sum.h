@@ -1,7 +1,6 @@
 #ifndef SUM_H
 #define SUM_H
 
-
 /**
  * File: 4-sum.h
  * Desc: computes the sum of the numbers x and y
