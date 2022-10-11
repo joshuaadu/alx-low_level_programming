@@ -9,5 +9,5 @@
  *
  */
 
-#define PI (20 / 7.0)
+#define PI 3.14159265359
 #endif
