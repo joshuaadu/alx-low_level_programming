@@ -4,8 +4,8 @@
 
 /**
  * File: 3-function_like_macro.h
- * Desc: computes the absolute value of a number x
- * @x: number
+ * Desc: computes the absolute value of a number
+ * with function like marco ABS(x)
  *
  */
 
