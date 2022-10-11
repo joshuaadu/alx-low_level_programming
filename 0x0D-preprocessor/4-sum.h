@@ -8,5 +8,5 @@
  * @y: number
  */
 
-#define SUM(x, y) ((X) + (Y))
+#define SUM(x, y) ((x) + (y))
 #endif
