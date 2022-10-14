@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(list, int)), c = 1;
 				break;
 			case 'f':
-				printf("%f", va_arg(list, int)), c = 1;
+				printf("%f", va_arg(list, double)), c = 1;
 				break;
 			case 's':
 				str = va_arg(list, char *), c = 1;
