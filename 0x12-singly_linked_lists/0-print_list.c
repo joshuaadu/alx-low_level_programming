@@ -7,13 +7,13 @@
 
 size_t print_list(const list_t *h)
 {
-	int count = 0;
+	size_t count = 0;
 
 	while (h)
 	{
 		if (h->str)
 		{
-			printf("[%d] (%s)\n", h->len, h->str);
+			printf("[%u] (%s)\n", h->len, h->str);
 		}
 		else
 		{
