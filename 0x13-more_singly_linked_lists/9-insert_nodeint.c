@@ -26,8 +26,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	while (curr && i < idx)
 	{
-		printf("curr value: %d\n", curr->n);
-
 		if (i == idx - 1)
 		{
 			new->next = curr->next;
@@ -36,11 +34,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 			return (new);
 		}
-		else
-		{
-			curr = curr->next;
-			i++;
-		}
+
+		curr = curr->next;
+		i++;
 	}
 
 	return (NULL);
