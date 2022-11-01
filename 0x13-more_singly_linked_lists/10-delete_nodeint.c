@@ -1,9 +1,12 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - deletes the node at index index of a listint_t linked list
+ * delete_nodeint_at_index - deletes the node at index
+ * of a listint_t linked list
+ *
  * @head: head of the linked list
- * @idx: index of the list where the new node should be added.
+ * @index: index of the list node to be deleted.
+ *
  * Return: 1 if it succeeded, -1 if it failed
  */
 
