@@ -21,8 +21,8 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 
-	for (len = 0; b[len]; len++)
-		;
+	for (len = 0; b[len];)
+		len++;
 
 	for (len -= 1; len >= 0; len--)
 	{
@@ -32,7 +32,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		dec += (b[len] - '0') * pow;
 
-		pow = pow * 2;
+		pow *= 2;
 	}
 
 	return (dec);
