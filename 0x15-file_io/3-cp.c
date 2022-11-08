@@ -100,6 +100,8 @@ int main(int argc, char *argv[])
 		w = write(to, buf, r);
 		if (w == -1)
 			checkerror(0, -1, argv);
+        r = read(from, buf, MAX);
+        to = open(argv[2], O_WRONLY | O_APPEND);
 	};
 	fdclose(from);
 	fdclose(to);
