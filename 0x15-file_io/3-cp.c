@@ -88,7 +88,6 @@ int main(int argc, char *argv[])
 			free(buf);
 			exit(99);
 		}
-		printf("Working !");
 		r = read(from, buf, MAX);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 	} while (r > 0);
