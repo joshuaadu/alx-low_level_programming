@@ -73,8 +73,7 @@ int main(int argc, char *argv[])
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buf, MAX);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while (r > 0)
-	{
+	do {
 		if (from == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -92,7 +91,7 @@ int main(int argc, char *argv[])
 		printf("Working !");
 		r = read(from, buf, MAX);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}
+	} while (r > 0);
 	fdclose(from);
 	fdclose(to);
 	return (1);
