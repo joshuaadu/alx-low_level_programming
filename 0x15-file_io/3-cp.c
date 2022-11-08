@@ -6,7 +6,7 @@
  * fdclose - close a file descriptor
  * @fd: opened file descriptor
  *
- * Return: a non negative integer if successful and -1 when otherwise
+ * Return: nothing
  */
 
 void fdclose(int fd)
@@ -17,6 +17,29 @@ void fdclose(int fd)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
+	}
+}
+
+/**
+ * checkerror - check for file operation error
+ * @from: source file descriptor
+ * @to: destination file descriptor
+ * @argv: array of filenames
+ * Return: void
+ */
+void checkerror(int from, int to, char *argv[])
+{
+	if (from == -1)
+	{
+		dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	if (to == -1)
+	{
+		dprintf(STDERR_FILENO,
+				"Error: Can't write to file %s\n", argv[2]);
+		exit(99);
 	}
 }
 
@@ -67,21 +90,14 @@ int main(int argc, char *argv[])
 
 	from = open(argv[1], O_RDONLY);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	checkerror(from, to, argv);
 	do {
 		r = read(from, buf, MAX);
-		if (from == -1 || r == -1)
-		{
-			dprintf(STDERR_FILENO,
-					"Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
+		if (r == -1)
+			checkerror(-1, 0, argv);
 		w = write(to, buf, r);
-		if (to == -1 || w == -1)
-		{
-			dprintf(STDERR_FILENO,
-					"Error: Can't write to file %s\n", argv[2]);
-			exit(99);
-		}
+		if (w == -1)
+			checkerror(0, -1, argv);
 	} while (r == MAX);
 	fdclose(from);
 	fdclose(to);
