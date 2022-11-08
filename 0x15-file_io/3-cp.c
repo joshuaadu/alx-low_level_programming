@@ -91,14 +91,16 @@ int main(int argc, char *argv[])
 	from = open(argv[1], O_RDONLY);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	checkerror(from, to, argv);
-	do {
+    r = MAX;
+	while (r > 0)
+    {
 		r = read(from, buf, MAX);
 		if (r == -1)
 			checkerror(-1, 0, argv);
 		w = write(to, buf, r);
 		if (w == -1)
 			checkerror(0, -1, argv);
-	} while (r == MAX);
+	};
 	fdclose(from);
 	fdclose(to);
 	return (0);
