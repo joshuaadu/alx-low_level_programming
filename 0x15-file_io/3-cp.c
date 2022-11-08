@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 					"Error: Can't write to file %s\n", argv[2]);
 			exit(99);
 		}
-	} while (r > 0);
+	} while (r == MAX);
 	fdclose(from);
 	fdclose(to);
 	return (0);
