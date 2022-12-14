@@ -15,7 +15,10 @@ size_t print_dlistint(const dlistint_t *h)
 	{
 		return (EXIT_FAILURE);
 	}
-	curr = (dlistint_t *) h;
+	if (h->prev)
+		curr = (dlistint_t *) h->prev;
+	else
+		curr = (dlistint_t *) h;
 	while (curr)
 	{
 		printf("%d\n", curr->n);
