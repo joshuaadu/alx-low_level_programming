@@ -8,20 +8,18 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *curr;
 	size_t n = 0;
 
 	if (!h)
 	{
-		return (EXIT_FAILURE);
+		return (n);
 	}
-	curr = (dlistint_t *) h;
-	while (curr->prev)
-		curr = (dlistint_t *) h->prev;
-	while (curr)
+	while (h->prev)
+		h = h->prev;
+	while (h)
 	{
-		printf("%d\n", curr->n);
-		curr = curr->next;
+		printf("%d\n", h->n);
+		h = h->next;
 		n++;
 	}
 	return (n);
