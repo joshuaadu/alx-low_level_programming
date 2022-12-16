@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * get_dnodeint_at_index - adds a new node at the end of a dlistint_t list
+ * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: point of head of linked
  * @idx: the index of the node, starting from 0
  * @n: new value
@@ -24,13 +24,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	while (curr)
 	{
 		if (i == idx)
-			{
-				new_node->next = curr;
-				new_node->prev = curr->prev;
-				curr->prev->next = new_node;
-				curr->prev = new_node;
-				return (new_node);
-			}
+		{
+			new_node->next = curr;
+			new_node->prev = curr->prev;
+			curr->prev->next = new_node;
+			curr->prev = new_node;
+			return (new_node);
+		}
 		i++;
 		curr = curr->next;
 	}
